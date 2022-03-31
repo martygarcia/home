@@ -225,3 +225,180 @@ function insertarNombre(evt) {
     alert("Se ha insertado el nombre");
   }
 }
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="style.js"></script>
+    
+<!--     
+        // var numero1 = 100
+        // var numero1 = 200
+        // alert(numero1);
+
+        // var numero = 50;
+        // var numero = 75;
+        // alert(numero);
+
+        // var nombre = "Alejandro"
+        // alert(nombre)
+
+        // function operacion(){
+        //     var suma = 20;
+
+        //     var suma2 = 20;
+
+        //     total = suma + suma2;
+
+        //     alert(suma + suma2)
+        // }
+
+        // operacion
+
+        // console.log("hola") -->
+
+        
+
+    
+</head>
+  
+
+<body>
+    <h1>Hola mundo!</h1>
+
+  <!-- <script>
+
+    function suma(){
+        var operador1 = 8;
+
+        var operador2 = 2;
+
+        resultado = operador1 + operador2;
+
+        alert(resultado);
+    }
+
+    suma();
+
+  </script> -->
+
+
+    <!-- <form action="/action_page.php">
+        <p>Please select your favorite Web language:</p>
+        <input type="radio"  name="fav_language" value="HTML" checked onclick="muestraOpcion()"  >option
+
+        <input type="radio"  name="fav_language" value="CSS" onclick="muestraOpcion()">
+       
+        <input type="radio"  name="fav_language" value="JavaScript" onclick="muestraOpcion()">
+
+    </form>    
+
+   
+    <script>
+        function muestraOpcion(){
+            var but = document.getElementsByName("fav_language");
+
+            for (let i = 0; i < but.length; i++) {
+
+                if (but[i].checked) {
+                    alert(but[i].value);
+                }
+            }
+        }
+    </script> -->
+   
+
+    <!-- <form>
+        <input type="text" id="texto" />
+        <button type="button" onclick="añadirTexto()">Añadir texto</button>
+  </form>
+  
+      <div id="mostrar_texto"></div> -->
+
+
+      <!-- <form>
+        <input type="text" id="num1" />
+        <input type="text" id="num2" />
+        <button type="button" onclick="mayorNum()">¿Quien es el mayor?</button>
+  </form> -->
+
+  <!-- <button type="button" onclick="generarNumeros()">Generar lista</button>
+    <select id="elementos">
+    </select> -->
+
+    <form>
+        <input id="nombre" type="text" placeholder="Insertar nombre..." />
+        <button onclick="insertarNombre(event)">Insertar</button>
+   </form>
+   <ul id="lista-nombres">
+   </ul>
+  
+
+  
+
+
+    
+
+      
+  
+</body>
+</html>
+
+// function añadirTexto() {
+
+    //     var texto = document.getElementById("texto")
+    //     var mostrar = document.getElementById("mostrar_texto")
+      
+    //     mostrar.innerHTML += texto.value;
+    //   }
+    
+    // function mayorNum() {
+    //     var num1 = parseInt(document.getElementById("num1").value);
+    //     var num2 = parseInt(document.getElementById("num2").value);
+    //     if (num1 && num2) {
+    //       if (num1 >= num2) {
+    //         if (num1 == num2) {
+    //           alert("Los numeros son iguales")
+    //         } else {
+    //           alert("La primera casilla es mayor")
+    //         }
+    //       } else {
+    //         alert("La segunda es mayor")
+    //       }
+    //     } else {
+    //       alert("Uno de los numeros no se relleno")}
+    //     } 
+    
+    // function getRandomInt(min, max) {
+    //   return Math.floor(Math.random() * (max - min)) + min;
+    // }
+    // function generarNumeros() {
+    //   let elementos = document.getElementById("elementos");
+    //   let opcionesGeneradas = "";
+    //   for (let i = 0; i < 10; i++) {
+    //     opcionesGeneradas += "<option>" + getRandomInt(1, 100) + "</option>";
+    //   }
+    //   elementos.innerHTML = opcionesGeneradas;
+    // }
+    
+    function insertarNombre(evt) {
+      evt.preventDefault();
+      let nombre = document.getElementById("nombre").value;
+      if (nombre == "") {
+        alert("El nombre no puede estar vacio");
+      } else {
+        let opcion = "<li> " + nombre + "</li>";
+        let lista = document.getElementById("lista-nombres");
+        lista.innerHTML += opcion;
+        alert("Se ha insertado el nombre");
+      }
+    }
